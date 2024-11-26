@@ -1,0 +1,126 @@
+# For more information, see the Configuration Guide:
+# https://www.librechat.ai/docs/configuration/librechat_yaml
+
+# Configuration version (required)
+version: 1.1.5
+
+# Cache settings: Set to true to enable caching
+cache: true
+
+modelSpecs:
+  enforce: true
+  prioritize: true
+  list:
+    - name: "Concordia Chat"
+      label: "Concordia Chat"
+      description: "Helps you find information available on Concordia.courses"
+      iconURL: "https://concordia.courses/logo.webp"
+      preset:
+        default: true
+        endpoint: "openAI"
+        model: "gpt-4o-mini"
+        maxContextTokens: 128000 # Maximum context tokens
+        max_tokens: 4096 # Maximum output tokens
+        temperature: 0.2
+        modelLabel: "Concordia Chat"
+        promptPrefix: |
+          I am an AI chatbot designed to help you find information available on the Concordia.courses website. Please provide me with a query or question, and I will do my best to assist you.
+
+# Custom interface configuration
+interface:
+  # Privacy policy settings
+  privacyPolicy:
+    externalUrl: 'https://concordia.coursesi/ai-privacy'
+    openNewTab: true
+
+  # Concordia Courses Settings
+  multiConvo: false
+  modelSelect: false
+
+  # Terms of service
+  termsOfService:
+    externalUrl: 'https://concordia.courses/ai-tos'
+    openNewTab: true
+    modalAcceptance: true
+    modalTitle: "Terms of Service for LibreChat"
+    modalContent: |
+      # Terms and Conditions for LibreChat
+
+      *Effective Date: November 26, 2024*
+
+      Welcome to  Concordia Courses Chatbot, an informational platform designed to assist users with Concordia University course details, instructors, and related reviews.
+
+      ## 1. Usage
+
+      The Concordia Courses Chatbot is for personal and informational use only. By using the chatbot, you agree to these terms.
+
+      ## 2. Ownership
+
+      The chatbot and its underlying code are the property of [Your Organization Name]. Redistribution, reverse-engineering, or commercial use without permission is prohibited.
+
+      ## 3. Accuracy
+
+      While we strive for accurate course and instructor information, the chatbot's responses may not always be up-to-date. For official details, consult Concordia University.
+
+      ## 4. Prohibited Use
+
+      Do not use the chatbot for offensive, illegal, or harmful purposes. Misuse may result in restricted access.
+
+      ## 6. Changes to the Terms
+
+      We reserve the right to update these terms at any time. Continued use after updates indicates acceptance.
+
+      ## 7. Contact Information
+
+      For questions, contact me at Beaudelaire@tutamail.com.
+
+      By using the Website, you acknowledge that you have read these Terms of Service and agree to be bound by them.
+    
+
+# speech:
+#   tts:
+#     openai:
+#       url: ''
+#       apiKey: '${TTS_API_KEY}'
+#       model: ''
+#       voices: ['']
+
+#  
+#   stt:
+#     openai:
+#       url: ''
+#       apiKey: '${STT_API_KEY}'
+#       model: ''
+
+  rateLimits:
+    fileUploads:
+      ipMax: 100
+      ipWindowInMinutes: 60  # Rate limit window for file uploads per IP
+      userMax: 50
+      userWindowInMinutes: 60  # Rate limit window for file uploads per user
+    conversationsImport:
+      ipMax: 100
+      ipWindowInMinutes: 60  # Rate limit window for conversation imports per IP
+      userMax: 50
+      userWindowInMinutes: 60  # Rate limit window for conversation imports per user
+
+  fileConfig:
+    endpoints:
+      assistants:
+        fileLimit: 5
+        fileSizeLimit: 10  # Maximum size for an individual file in MB
+        totalSizeLimit: 50  # Maximum total size for all files in a single request in MB
+        supportedMimeTypes:
+          - "image/.*"
+          - "application/pdf"
+      openAI:
+        disabled: true  # Disables file uploading to the OpenAI endpoint
+      default:
+        totalSizeLimit: 20
+      YourCustomEndpointName:
+        fileLimit: 2
+        fileSizeLimit: 5
+    serverFileSizeLimit: 100  # Global server file size limit in MB
+    avatarSizeLimit: 2  # Limit for user avatar image size in MB
+# See the Custom Configuration Guide for more information on Assistants Config:
+# https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
