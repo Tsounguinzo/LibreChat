@@ -8,11 +8,11 @@ version: 1.1.5
 cache: true
 
 modelSpecs:
-  enforce: true
+  enforce: false
   prioritize: true
   list:
-    - name: "Concordia Chat"
-      label: "Concordia Chat"
+    - name: "ConcordiaAI"
+      label: "ConcordiaAI"
       description: "Helps you find information available on Concordia.courses"
       iconURL: "https://concordia.courses/logo.webp"
       preset:
@@ -22,7 +22,7 @@ modelSpecs:
         maxContextTokens: 128000 # Maximum context tokens
         max_tokens: 4096 # Maximum output tokens
         temperature: 0.2
-        modelLabel: "Concordia Chat"
+        modelLabel: "ConcordiaAI"
         promptPrefix: |
           I am an AI chatbot designed to help you find information available on the Concordia.courses website. Please provide me with a query or question, and I will do my best to assist you.
 
@@ -34,6 +34,7 @@ interface:
     openNewTab: true
 
   # Concordia Courses Settings
+  sidePanel: false
   multiConvo: false
   modelSelect: false
 
@@ -42,9 +43,9 @@ interface:
     externalUrl: 'https://concordia.courses/ai-tos'
     openNewTab: true
     modalAcceptance: true
-    modalTitle: "Terms of Service for LibreChat"
+    modalTitle: "Terms of Service for ConcordiaAI"
     modalContent: |
-      # Terms and Conditions for LibreChat
+      # Terms and Conditions for ConcordiaAI
 
       *Effective Date: November 26, 2024*
 
@@ -75,52 +76,8 @@ interface:
       For questions, contact me at Beaudelaire@tutamail.com.
 
       By using the Website, you acknowledge that you have read these Terms of Service and agree to be bound by them.
-    
 
-# speech:
-#   tts:
-#     openai:
-#       url: ''
-#       apiKey: '${TTS_API_KEY}'
-#       model: ''
-#       voices: ['']
-
-#  
-#   stt:
-#     openai:
-#       url: ''
-#       apiKey: '${STT_API_KEY}'
-#       model: ''
-
-  rateLimits:
-    fileUploads:
-      ipMax: 100
-      ipWindowInMinutes: 60  # Rate limit window for file uploads per IP
-      userMax: 50
-      userWindowInMinutes: 60  # Rate limit window for file uploads per user
-    conversationsImport:
-      ipMax: 100
-      ipWindowInMinutes: 60  # Rate limit window for conversation imports per IP
-      userMax: 50
-      userWindowInMinutes: 60  # Rate limit window for conversation imports per user
-
-  fileConfig:
-    endpoints:
-      assistants:
-        fileLimit: 5
-        fileSizeLimit: 10  # Maximum size for an individual file in MB
-        totalSizeLimit: 50  # Maximum total size for all files in a single request in MB
-        supportedMimeTypes:
-          - "image/.*"
-          - "application/pdf"
-      openAI:
-        disabled: true  # Disables file uploading to the OpenAI endpoint
-      default:
-        totalSizeLimit: 20
-      YourCustomEndpointName:
-        fileLimit: 2
-        fileSizeLimit: 5
-    serverFileSizeLimit: 100  # Global server file size limit in MB
-    avatarSizeLimit: 2  # Limit for user avatar image size in MB
-# See the Custom Configuration Guide for more information on Assistants Config:
-# https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
+fileConfig:
+  endpoints:
+    openAI:
+      disabled: true
