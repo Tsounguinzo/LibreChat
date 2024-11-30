@@ -30,7 +30,7 @@ modelSpecs:
 interface:
   # Privacy policy settings
   privacyPolicy:
-    externalUrl: 'https://concordia.coursesi/ai-privacy'
+    externalUrl: 'https://concordia.coursesi/privacy'
     openNewTab: true
 
   # Concordia Courses Settings
@@ -40,7 +40,7 @@ interface:
 
   # Terms of service
   termsOfService:
-    externalUrl: 'https://concordia.courses/ai-tos'
+    externalUrl: 'https://concordia.courses/tos'
     openNewTab: true
     modalAcceptance: true
     modalTitle: "Terms of Service for ConcordiaAI"
@@ -49,7 +49,7 @@ interface:
 
       *Effective Date: November 26, 2024*
 
-      Welcome to  Concordia Courses Chatbot, an informational platform designed to assist users with Concordia University course details, instructors, and related reviews.
+      Welcome to  ConcordiaAI, an informational platform designed to assist users with Concordia University course details, instructors, and related reviews.
 
       ## 1. Usage
 
@@ -57,7 +57,7 @@ interface:
 
       ## 2. Ownership
 
-      The chatbot and its underlying code are the property of [Your Organization Name]. Redistribution, reverse-engineering, or commercial use without permission is prohibited.
+      The chatbot and its underlying code are the property of Concordia.courses. Redistribution, reverse-engineering, or commercial use without permission is prohibited.
 
       ## 3. Accuracy
 
