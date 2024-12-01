@@ -129,3 +129,15 @@ fileConfig:
   endpoints:
     openAI:
       disabled: true
+
+registration:
+  allowedDomains:
+    - "gmail.com"
+    - "concordia.ca"
+    - "tutamail.com"
+    - "protonmail.com"
+    - "outlook.com"
+    - "yahoo.com"
+    - "hotmail.com"
+    - "icloud.com"
+    - "aol.com"
