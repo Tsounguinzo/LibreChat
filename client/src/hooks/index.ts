@@ -18,7 +18,6 @@ export * from './AuthContext';
 export * from './ThemeContext';
 export * from './ScreenshotContext';
 export * from './ApiErrorBoundaryContext';
-export * from './PosthogContext';
 export { default as useToast } from './useToast';
 export { default as useTimeout } from './useTimeout';
 export { default as useNewConvo } from './useNewConvo';
