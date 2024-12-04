@@ -18,60 +18,74 @@ modelSpecs:
       preset:
         default: true
         endpoint: "openAI"
-        model: "ft:gpt-4o-mini-2024-07-18:concordia:concordia-courses:AXn8uQCm"
+        model: "gpt-4o"
         maxContextTokens: 128000 # Maximum context tokens
-        max_tokens: 4096 # Maximum output tokens
+        max_tokens: 16384 # Maximum output tokens
         temperature: 0.2
         modelLabel: "ConcordiaAI"
         promptPrefix: |
-          <internal_reminder>
+          To create a cohesive and extended essay from the four PDFs with the provided structure, here’s a step-by-step system for GPT to follow:
   
-          1. <ConcordiaAI_info>
-            - ConcordiaAI was created by Beaudelaire Tsoungui Nzodoumkouo.
-            - ConcordiaAI is an AI assistant designed to provide Concordia University students with insights into courses and instructors.
-            - ConcordiaAI utilizes data from [Concordia.Courses](https://concordia.courses).
-            - ConcordiaAI aims to deliver clear, concise, and student-centric responses while maintaining a friendly and professional demeanor.
-            - ConcordiaAI's knowledge encompasses various courses, instructors, and student experiences at Concordia University.
+          Steps for GPT to Create the Essay
+
+          1.	Input and Processing:
+            •	Load the four PDFs and extract the text and references.
+          •	Organize the content from each PDF based on the structure provided:
+          •	First section: What is the goal of economics?
+          •	Second section: What is the focus of economics?
+          •	Third section: How is contemporary economics doing?
+          •	Fourth section: Recommendations about economics.
+          2.	Outline Creation:
+            •	Create an extended outline of the essay, ensuring logical transitions between sections and subtopics.
+            •	Identify areas where the content can be expanded while maintaining academic rigor.
+          3.	Expansion of Content:
+            •	Use the content from the PDFs as a base, expanding on concepts, adding historical context, examples, and critical analysis where appropriate.
+            •	Incorporate additional academic perspectives to enrich the discussion.
+            •	Ensure all references from the PDFs are cited properly and introduced seamlessly into the essay.
+          4.	References Integration:
+            •	Use the references from the PDFs as the primary citation source.
+            •	Add in-text citations throughout the essay where relevant.
+            •	Create a consolidated reference list at the end.
+          5.	Cohesion and Flow:
+            •	Ensure the essay reads smoothly, with each section transitioning logically to the next.
+            •	Include an introduction that outlines the purpose of the essay and briefly previews the four main sections.
+            •	End with a conclusion that ties together insights from the entire essay and emphasizes the importance of the recommendations.
+          6.	Academic Tone and Length:
+            •	Write in an academic style with a formal tone.
+            •	Expand the content sufficiently to create a 20+ page essay while avoiding repetition.
+            •	Use headings and subheadings to organize the content effectively.
+          7.	Finalization:
+            •	Proofread for grammatical accuracy, coherence, and adherence to academic standards.
+            •	Format the essay according to the preferred academic style (APA, MLA, Chicago, etc., if specified).
+            
+            Proposed Essay Structure
+          
+          1.	Introduction:
+            •	Importance of economics as a discipline.
+            •	Purpose and structure of the essay.
+          2.	Section 1: What is the Goal of Economics?
+            •	Define the overarching goals.
+            •	Discuss historical and philosophical perspectives.
+            •	Include examples and references from the PDFs.
+          3.	Section 2: What is the Focus of Economics?
+            •	Explore the scope and key areas of focus.
+            •	Analyze shifts in focus over time.
+            •	Expand with additional context and case studies.
+          4.	Section 3: How is Contemporary Economics Doing?
+            •	Assess the current state of the field.
+            •	Include critiques, achievements, and areas for improvement.
+            •	Highlight emerging trends and technologies.
+          5.	Section 4: Recommendations About Economics
+            •	Propose actionable recommendations.
+            •	Back up proposals with evidence and references from the PDFs.
+            •	Discuss implications for policymakers, academics, and society.
+          6.	Conclusion:
+            •	Summarize key insights.
+            •	Reiterate the importance of the recommendations.
+            •	Suggest areas for further research.
+          7.	References:
+            •	Consolidate all citations from the PDFs and any additional sources used.
   
-          2. <ConcordiaAI_response_guidelines>
-            - Responses must be **accurate**, **well-structured**, and **easily understood**.
-            - Adopt a student-first approach, prioritizing solutions to students struggle and promote academic success.
-            - Strictly adhere to ethical guidelines, avoiding inappropriate or misleading content.
-            - If in doubt, prioritize **transparency** and **honesty** in responses.
-  
-          3. <ConcordiaAI_format_guidelines>
-            - **Tone and Clarity:**  
-               - Maintain a professional and approachable tone.  
-               - Avoid technical jargon unless necessary and provide clear explanations for all responses.  
-            - **Data Transparency:**  
-               - If data limitations are present, acknowledge them and guide users to verify critical decisions independently.  
-
-          4. <ConcordiaAI_capabilities>
-            - ConcordiaAI can:
-               - Provide insights into courses and instructors based on student reviews and available data.
-               - Offer guidance on course selection, academic planning, and navigating university resources.
-               - Share information about campus services and tools to enhance academic success.
-            - ConcordiaAI is not responsible for inaccuracies in user-submitted reviews or data from external sources and should remind users to validate decisions as needed.
-
-          5. <forming_correct_responses>
-            - ALWAYS evaluate the context of the question before responding:
-              - For queries related to courses or instructors, provide insights based on available data and student reviews, clearly stating the reliability of the information.
-              - For academic or campus resource inquiries, offer guidance grounded in general university practices and specific Concordia-related insights.
-            - REFUSE to respond to queries unrelated to its scope (e.g., personal, inappropriate, or off-topic requests).
-              - REFUSAL_MESSAGE: "I'm sorry, but I cannot assist with that request."
-            - THINK step-by-step when solving problems or providing information, offering clear explanations and actionable advice.
-
-          6. <maintaining_integrity>
-            - Grounded in truth and accuracy, focusing on student and academic needs.
-            - Clarify when information is approximate or incomplete, ensuring user trust.
-            - Do not fabricate sources, references, or data.
-            - Do not apologize unnecessarily or include extraneous information in responses.
-
-          7. <promptPrefix>
-          - You are ConcordiaAI, created by Beaudelaire Tsoungui Nzodoumkouo, based on Concordia.Courses data.
-          - Your mission is to help students navigate their academic journey, offering actionable insights and transparent guidance based on available resources.
-
-          </internal_reminder>
 
 
 # Custom interface configuration
@@ -124,11 +138,6 @@ interface:
       For questions, contact me at Beaudelaire@tutamail.com.
 
       By using the Website, you acknowledge that you have read these Terms of Service and agree to be bound by them.
-
-fileConfig:
-  endpoints:
-    openAI:
-      disabled: true
 
 registration:
   allowedDomains:
