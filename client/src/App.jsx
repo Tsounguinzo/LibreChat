@@ -6,7 +6,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClient, QueryClientProvider, QueryCache } from '@tanstack/react-query';
 import { ScreenshotProvider, ThemeProvider, useApiErrorBoundary } from './hooks';
-import { ToastProvider } from './Providers';
+import { ToastProvider, PostHogProvider } from './Providers';
 import Toast from './components/ui/Toast';
 import { LiveAnnouncer } from '~/a11y';
 import { router } from './routes';
@@ -25,29 +25,31 @@ const App = () => {
   });
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <RecoilRoot>
-        <LiveAnnouncer>
-          <ThemeProvider>
-            <RadixToast.Provider>
-              <ToastProvider>
-                <DndProvider backend={HTML5Backend}>
-                  <RouterProvider router={router} />
-                  <ReactQueryDevtools initialIsOpen={false} position="top-right" />
-                  <Toast />
-                  <RadixToast.Viewport className="pointer-events-none fixed inset-0 z-[1000] mx-auto my-2 flex max-w-[560px] flex-col items-stretch justify-start md:pb-5" />
-                </DndProvider>
-              </ToastProvider>
-            </RadixToast.Provider>
-          </ThemeProvider>
-        </LiveAnnouncer>
-      </RecoilRoot>
-    </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>
+        <RecoilRoot>
+          <LiveAnnouncer>
+            <ThemeProvider>
+              <PostHogProvider>
+                <RadixToast.Provider>
+                  <ToastProvider>
+                    <DndProvider backend={HTML5Backend}>
+                      <RouterProvider router={router} />
+                      <ReactQueryDevtools initialIsOpen={false} position="top-right" />
+                      <Toast />
+                      <RadixToast.Viewport className="pointer-events-none fixed inset-0 z-[1000] mx-auto my-2 flex max-w-[560px] flex-col items-stretch justify-start md:pb-5" />
+                    </DndProvider>
+                  </ToastProvider>
+                </RadixToast.Provider>
+              </PostHogProvider>
+            </ThemeProvider>
+          </LiveAnnouncer>
+        </RecoilRoot>
+      </QueryClientProvider>
   );
 };
 
 export default () => (
-  <ScreenshotProvider>
-    <App />
-  </ScreenshotProvider>
+    <ScreenshotProvider>
+      <App />
+    </ScreenshotProvider>
 );
