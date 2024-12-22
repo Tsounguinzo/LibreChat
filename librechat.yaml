@@ -14,6 +14,7 @@ modelSpecs:
     - name: "ConcordiaAI"
       label: "ConcordiaAI"
       description: "Helps you find information available on Concordia.courses"
+      iconURL: "https://concordia.courses/logo.webp"
       greeting: |
         Hi i'm ConcordiaAI! How can I assist you today?
       preset:
