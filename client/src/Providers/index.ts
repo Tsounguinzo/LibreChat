@@ -18,4 +18,3 @@ export * from './AnnouncerContext';
 export * from './AgentsMapContext';
 export * from './CodeBlockContext';
 export * from './ToolCallsMapContext';
-export { PostHogProvider } from './PostHogProvider';
