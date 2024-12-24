@@ -7,8 +7,17 @@ version: 1.1.5
 # Cache settings: Set to true to enable caching
 cache: true
 
+endpoints:
+  agents:
+    disableBuilder: false
+    # (optional) Agent Capabilities available to all users. Omit the ones you wish to exclude. Defaults to list below.
+    capabilities:
+      - "actions"
+      - "tools"
+
+
 modelSpecs:
-  enforce: true
+  enforce: false
   prioritize: true
   list:
     - name: "ConcordiaAI"
