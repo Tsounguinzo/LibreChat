@@ -369,6 +369,8 @@ export default {
   com_assistants_available_actions: '可用操作',
   com_assistants_running_action: '執行中的動作',
   com_assistants_completed_action: '與 {0} 對話完成',
+  com_assistants_running_action_concordiaAI: '思考中',
+  com_assistants_completed_action_concordiaAI: '關於{0}的想法',
   com_assistants_completed_function: '已執行 {0}',
   com_assistants_function_use: '助理使用了 {0}',
   com_assistants_domain_info: '助理將此資訊傳送給 {0}',

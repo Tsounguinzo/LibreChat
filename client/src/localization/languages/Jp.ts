@@ -69,6 +69,8 @@ export default {
   com_assistants_domain_info: 'アシスタントがこの情報を {0} に送信しました',
   com_assistants_delete_actions_success: 'アシスタントからアクションが削除されました',
   com_assistants_update_actions_success: 'アクションが作成または更新されました',
+  com_assistants_running_action_concordiaAI: '考え中',
+  com_assistants_completed_action_concordiaAI: '{0} についての考え',
   com_assistants_update_actions_error: 'アクションの作成または更新中にエラーが発生しました。',
   com_assistants_delete_actions_error: 'アクションの削除中にエラーが発生しました。',
   com_assistants_actions_info:

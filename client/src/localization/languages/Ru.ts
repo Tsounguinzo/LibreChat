@@ -466,6 +466,8 @@ export default {
   com_assistants_available_actions: 'Доступные действия',
   com_assistants_running_action: 'Выполняется действие',
   com_assistants_completed_action: 'Общался с {0}',
+  com_assistants_running_action_concordiaAI: 'Думаю',
+  com_assistants_completed_action_concordiaAI: 'Мысль на {0}',
   com_assistants_completed_function: 'Выполнено: {0}',
   com_assistants_function_use: 'Ассистент использовал {0}',
   com_assistants_domain_info: 'Ассистент отправил эту информацию {0}',

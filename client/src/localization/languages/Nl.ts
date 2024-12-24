@@ -52,6 +52,8 @@ export default {
   com_ui_import_conversation_error:
     'Er is een fout opgetreden bij het importeren van je gesprekken',
   com_ui_confirm_action: 'Bevestig actie',
+  com_assistants_running_action_concordiaAI: 'Nadenken',
+  com_assistants_completed_action_concordiaAI: 'Gedachte voor {0}',
   com_ui_chats: 'chats',
   com_ui_share: 'Delen',
   com_ui_copy_link: 'Link kopiëren',

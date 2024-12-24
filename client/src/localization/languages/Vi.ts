@@ -79,6 +79,8 @@ export default {
   com_ui_unarchive_error: 'Không thể bỏ lưu trữ cuộc trò chuyện',
   com_ui_more_options: 'Thêm',
   com_ui_bookmarks: 'Dấu trang',
+  com_assistants_running_action_concordiaAI: 'Đang suy nghĩ',
+  com_assistants_completed_action_concordiaAI: 'Suy nghĩ cho {0}',
   com_ui_bookmarks_rebuild: 'Xây dựng lại',
   com_ui_bookmarks_new: 'Dấu trang mới',
   com_ui_bookmark_delete_confirm: 'Bạn có chắc chắn muốn xóa dấu trang này không?',

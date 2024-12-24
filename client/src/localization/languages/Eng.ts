@@ -87,6 +87,8 @@ export default {
     'File search is not enabled on this model. Please select another model.',
   com_assistants_available_actions: 'Available Actions',
   com_assistants_running_action: 'Running action',
+  com_assistants_running_action_concordiaAI: 'Thinking',
+  com_assistants_completed_action_concordiaAI: 'Thought for {0}',
   com_assistants_completed_action: 'Talked to {0}',
   com_assistants_completed_function: 'Ran {0}',
   com_assistants_function_use: 'Assistant used {0}',

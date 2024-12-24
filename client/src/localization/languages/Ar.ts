@@ -383,6 +383,8 @@ export default {
   com_assistants_actions: 'إجراءات',
   com_assistants_add_tools: 'إضافة أدوات',
   com_assistants_add_actions: 'إضافة إجراءات',
+  com_assistants_running_action_concordiaAI: 'تفكير',
+  com_assistants_completed_action_concordiaAI: 'فكرة لمدة {0}',
   com_assistants_available_actions: 'الإجراءات المتاحة',
   com_assistants_running_action: 'جارٍ تنفيذ الإجراء',
   com_assistants_completed_action: 'تحدث إلى {0}',

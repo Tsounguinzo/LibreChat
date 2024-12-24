@@ -33,6 +33,8 @@ export default {
   com_assistants_add_actions: 'Añadir Acciones',
   com_assistants_available_actions: 'Acciones Disponibles',
   com_assistants_running_action: 'Ejecutando acción',
+  com_assistants_running_action_concordiaAI: 'Pensando',
+  com_assistants_completed_action_concordiaAI: 'Pensamiento para {0}',
   com_assistants_completed_action: 'Hablé con {0}',
   com_assistants_completed_function: 'Ejecuté {0}',
   com_assistants_function_use: 'El Asistente usó {0}',

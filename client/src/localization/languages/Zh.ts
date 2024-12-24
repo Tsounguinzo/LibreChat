@@ -59,6 +59,8 @@ export default {
   com_assistants_non_retrieval_model: '此模型未启用文件搜索功能。请选择其他模型。',
   com_assistants_available_actions: '可用操作',
   com_assistants_running_action: '正在运行操作',
+  com_assistants_running_action_concordiaAI: '思考中',
+  com_assistants_completed_action_concordiaAI: '关于{0}的想法',
   com_assistants_completed_action: '与 {0} 聊天',
   com_assistants_completed_function: '运行 {0}',
   com_assistants_function_use: '助手使用了 {0}',

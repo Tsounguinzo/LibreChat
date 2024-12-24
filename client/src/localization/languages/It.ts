@@ -42,6 +42,8 @@ export default {
   com_assistants_available_actions: 'Azioni Disponibili',
   com_assistants_running_action: 'Azione in corso',
   com_assistants_completed_action: 'Parlato con {0}',
+  com_assistants_running_action_concordiaAI: 'Pensando',
+  com_assistants_completed_action_concordiaAI: 'Pensiero per {0}',
   com_assistants_completed_function: 'Eseguito {0}',
   com_assistants_function_use: 'L\'Assistente ha usato {0}',
   com_assistants_domain_info: 'L\'Assistente ha inviato queste informazioni a {0}',

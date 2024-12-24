@@ -493,6 +493,8 @@ export default {
   com_assistants_add_actions: 'Ajouter des actions',
   com_assistants_available_actions: 'Actions disponibles',
   com_assistants_running_action: 'Action en cours',
+  com_assistants_running_action_concordiaAI: 'En train de penser',
+  com_assistants_completed_action_concordiaAI: 'Pensée pour {0}',
   com_assistants_completed_action: 'A parlé à {0}',
   com_assistants_completed_function: 'A exécuté {0}',
   com_assistants_function_use: 'L\'assistant a utilisé {0}',

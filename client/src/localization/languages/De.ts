@@ -49,6 +49,8 @@ export default {
     'Die Dateisuche ist für dieses KI-Modell nicht aktiviert. Bitte wähle ein anderes Modell aus.',
   com_assistants_available_actions: 'Verfügbare Aktionen',
   com_assistants_running_action: 'Aktion wird ausgeführt',
+  com_assistants_running_action_concordiaAI: 'Nachdenken',
+  com_assistants_completed_action_concordiaAI: 'Gedanke für {0}',
   com_assistants_completed_action: 'Mit {0} gesprochen',
   com_assistants_completed_function: '{0} ausgeführt',
   com_assistants_function_use: 'Assistent hat {0} verwendet',

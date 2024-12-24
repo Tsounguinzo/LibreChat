@@ -24,6 +24,8 @@ export default {
   com_assistants_instructions_placeholder: 'הוראות המערכת שהסייען משתמש בהן',
   com_assistants_description_placeholder: 'אופציונלי: תאר את ה-סייען שלך כאן',
   com_assistants_actions_disabled: 'עליך ליצור סייען לפני הוספת פעולות.',
+  com_assistants_running_action_concordiaAI: 'חושב',
+  com_assistants_completed_action_concordiaAI: 'מחשבה עבור {0}',
   com_assistants_update_success: 'עודכן בהצלחה',
   com_assistants_update_error: 'אירעה שגיאה בעדכון הסייען שלך.',
   com_assistants_create_success: 'נוצר בהצלחה',

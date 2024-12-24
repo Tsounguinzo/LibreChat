@@ -1,15 +1,11 @@
-import { useMemo } from 'react';
-import * as Popover from '@radix-ui/react-popover';
-import { actionDelimiter, actionDomainSeparator, Constants } from 'librechat-data-provider';
+import { useEffect, useMemo, useState } from 'react';
 import type { TAttachment } from 'librechat-data-provider';
 import useLocalize from '~/hooks/useLocalize';
 import ProgressCircle from './ProgressCircle';
 import InProgressCall from './InProgressCall';
-import Attachment from './Parts/Attachment';
 import CancelledIcon from './CancelledIcon';
 import ProgressText from './ProgressText';
 import FinishedIcon from './FinishedIcon';
-import ToolPopover from './ToolPopover';
 import WrenchIcon from './WrenchIcon';
 import { useProgress } from '~/hooks';
 import { logger } from '~/utils';
@@ -35,29 +31,17 @@ export default function ToolCall({
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - progress * circumference;
 
-  const { function_name, domain, isMCPToolCall } = useMemo(() => {
-    if (typeof name !== 'string') {
-      return { function_name: '', domain: null, isMCPToolCall: false };
-    }
+  const [startTime] = useState(() => Date.now());
+  const [endTime, setEndTime] = useState<number | null>(null);
 
-    if (name.includes(Constants.mcp_delimiter)) {
-      const [func, server] = name.split(Constants.mcp_delimiter);
-      return {
-        function_name: func || '',
-        domain: server && (server.replaceAll(actionDomainSeparator, '.') || null),
-        isMCPToolCall: true,
-      };
+  useEffect(() => {
+    if (progress >= 1 && endTime === null) {
+      setEndTime(Date.now());
     }
+  }, [progress, endTime]);
 
-    const [func, _domain] = name.includes(actionDelimiter)
-      ? name.split(actionDelimiter)
-      : [name, ''];
-    return {
-      function_name: func || '',
-      domain: _domain && (_domain.replaceAll(actionDomainSeparator, '.') || null),
-      isMCPToolCall: false,
-    };
-  }, [name]);
+  const durationInMs = endTime ? endTime - startTime : 0;
+  const durationInSec = (durationInMs / 1000).toFixed(2);
 
   const error =
     typeof output === 'string' && output.toLowerCase().includes('error processing tool');
@@ -105,39 +89,21 @@ export default function ToolCall({
   };
 
   const getFinishedText = () => {
-    if (isMCPToolCall === true) {
-      return localize('com_assistants_completed_function', function_name);
-    }
-    if (domain != null && domain && domain.length !== Constants.ENCODED_DOMAIN_LENGTH) {
-      return localize('com_assistants_completed_action', domain);
-    }
-    return localize('com_assistants_completed_function', function_name);
+    const timeTaken = `${durationInSec} sec`;
+    return localize('com_assistants_completed_action_concordiaAI', timeTaken);
   };
 
   return (
-    <Popover.Root>
-      <div className="my-2.5 flex items-center gap-2.5">
-        <div className="relative h-5 w-5 shrink-0">{renderIcon()}</div>
-        <ProgressText
-          progress={progress}
-          onClick={() => ({})}
-          inProgressText={localize('com_assistants_running_action')}
-          finishedText={getFinishedText()}
-          hasInput={hasInfo}
-          popover={true}
-        />
-        {hasInfo && (
-          <ToolPopover
-            input={args ?? ''}
-            output={output}
-            domain={domain ?? ''}
-            function_name={function_name}
-          />
-        )}
-      </div>
-      {attachments?.map((attachment, index) => (
-        <Attachment attachment={attachment} key={index} />
-      ))}
-    </Popover.Root>
+    <div className="my-2.5 flex items-center gap-2.5">
+      <div className="relative h-5 w-5 shrink-0">{renderIcon()}</div>
+      <ProgressText
+        progress={progress}
+        onClick={() => ({})}
+        inProgressText={localize('com_assistants_running_action_concordiaAI')}
+        finishedText={getFinishedText()}
+        hasInput={false}
+        popover={false}
+      />
+    </div>
   );
 }

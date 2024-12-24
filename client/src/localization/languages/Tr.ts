@@ -47,6 +47,8 @@ export default {
   com_assistants_available_actions: 'Mevcut Eylemler',
   com_assistants_running_action: 'Eylem çalışıyor',
   com_assistants_completed_action: '{0} ile konuştu',
+  com_assistants_running_action_concordiaAI: 'Düşünüyor',
+  com_assistants_completed_action_concordiaAI: '{0} için düşünce',
   com_assistants_completed_function: '{0} yürütüldü',
   com_assistants_function_use: 'Asistan {0} kullandı',
   com_assistants_domain_info: 'Asistan bu bilgiyi {0} adresine gönderdi',

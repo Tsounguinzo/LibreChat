@@ -134,6 +134,8 @@ export default {
   com_endpoint_default_with_num: 'domyślnie: {0}',
   com_endpoint_context: 'Kontekst',
   com_endpoint_tone_style: 'Styl tonu',
+  com_assistants_running_action_concordiaAI: 'Nagiisip',
+  com_assistants_completed_action_concordiaAI: 'Isip para sa {0}',
   com_endpoint_token_count: 'Liczba tokenów',
   com_endpoint_output: 'Wyjście',
   com_endpoint_google_temp:

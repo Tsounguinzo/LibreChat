@@ -166,6 +166,8 @@ export default {
   com_endpoint_bing_enable_sydney: 'Aktifkan Sydney',
   com_endpoint_bing_to_enable_sydney: 'Untuk mengaktifkan Sydney',
   com_endpoint_bing_jailbreak: 'Jailbreak',
+  com_assistants_running_action_concordiaAI: 'Berpikir',
+  com_assistants_completed_action_concordiaAI: 'Pikiran untuk {0}',
   com_endpoint_bing_context_placeholder:
     'Bing dapat menggunakan hingga 7k token untuk \'konteks\', yang dapat dirujuk untuk percakapan. Batas spesifik tidak diketahui tetapi mungkin menemui kesalahan melebihi 7k token',
   com_endpoint_bing_system_message_placeholder:

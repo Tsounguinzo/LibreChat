@@ -44,6 +44,8 @@ export default {
     'Tiedostohaku ei ole käytössä tässä mallissa. Valitse toinen malli.',
   com_assistants_available_actions: 'Käytettävissä olevat Toiminnot',
   com_assistants_running_action: 'Suoritetaan toimintoa',
+  com_assistants_running_action_concordiaAI: 'Ajattelee',
+  com_assistants_completed_action_concordiaAI: 'Ajatus {0} varten',
   com_assistants_completed_action: 'Puhuttiin {0}:lle',
   com_assistants_completed_function: 'Suoritettiin {0}',
   com_assistants_function_use: 'Avustaja käytti: {0}',

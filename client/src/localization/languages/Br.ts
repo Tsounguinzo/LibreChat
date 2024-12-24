@@ -67,6 +67,8 @@ export default {
     'A pesquisa de arquivos não está habilitada neste modelo. Por favor, selecione outro modelo.',
   com_assistants_available_actions: 'Ações Disponíveis',
   com_assistants_running_action: 'Executando ação',
+  com_assistants_running_action_concordiaAI: 'Pensando',
+  com_assistants_completed_action_concordiaAI: 'Pensamento para {0}',
   com_assistants_completed_action: 'Conversou com {0}',
   com_assistants_completed_function: 'Executou {0}',
   com_assistants_function_use: 'Assistente usou {0}',

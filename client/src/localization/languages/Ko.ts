@@ -716,6 +716,8 @@ export default {
   com_assistants_add_actions: '작업 추가',
   com_assistants_available_actions: '사용 가능한 작업',
   com_assistants_running_action: '작업 진행 중',
+  com_assistants_running_action_concordiaAI: '생각 중',
+  com_assistants_completed_action_concordiaAI: '{0}에 대한 생각',
   com_assistants_completed_action: '{0}과 대화했습니다',
   com_assistants_completed_function: '{0}을(를) 실행했습니다',
   com_assistants_function_use: '어시스턴트는 {0}을(를) 사용했습니다.',

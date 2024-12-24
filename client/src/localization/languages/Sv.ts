@@ -49,6 +49,8 @@ export default {
   com_ui_import_conversation_success: 'Konversationer har importerats framgångsrikt',
   com_ui_import_conversation_error: 'Det uppstod ett fel vid import av dina konversationer',
   com_ui_confirm_action: 'Bekräfta åtgärd',
+  com_assistants_running_action_concordiaAI: 'Tänker',
+  com_assistants_completed_action_concordiaAI: 'Tanke för {0}',
   com_ui_chats: 'chattar',
   com_ui_share: 'Dela',
   com_ui_copy_link: 'Kopiera länk',
