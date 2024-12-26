@@ -42,7 +42,7 @@ function RequestPasswordReset() {
     onError: () => {
       setShowResendLink(true);
       setVerificationStatus(true);
-      setHeaderText(localize('com_auth_email_verification_failed') + ' 😢');
+      setHeaderText(localize('com_auth_email_verification_success') + ' 🎉');
       setCountdown(0);
     },
   });
